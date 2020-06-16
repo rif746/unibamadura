@@ -10,6 +10,11 @@
     box-sizing: border-box;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+}
+
 .banner {
     background: url('../img/uniba.jpg');
     position: fixed ;
@@ -93,6 +98,7 @@ nav ul li a:hover, .jurusan ul li a:hover {
 
 .main-content {
     padding: 140px 100px;
+    margin-bottom: 120px;
 }
 
 .content h1, .main-content h1 {

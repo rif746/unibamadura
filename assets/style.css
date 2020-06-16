@@ -1,0 +1,221 @@
+:root {
+
+    scrollbar-color: green lightgreen;
+    scrollbar-width: thin;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.banner {
+    background: url('../img/uniba.jpg');
+    position: fixed ;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: -1;
+}
+
+.banner:after {
+    content: '';
+    background-color: black;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav h2 {
+    margin: 20px;
+    margin-left: 60px;
+}
+
+nav h2 img {
+    width: 80px;
+    border-radius: 100%;
+}
+
+nav ul li {
+    margin: 40px 0 10px 0;
+    text-align: center;
+}
+
+nav ul li:last-child {
+    margin-right: 60px;
+}
+
+nav ul li a, .jurusan ul li a {
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: inherit;
+    transition: ease-in-out 300ms;
+}
+
+nav ul li a:hover, .jurusan ul li a:hover {
+    background-color: rgb(54, 214, 62);
+    width: 100%;
+    color: black;
+    transition: ease-in-out 300ms;
+}
+
+.content, .main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    animation: show 1s forwards;
+}
+
+.content {
+    padding: 20px 100px;
+}
+
+.main-content {
+    padding: 140px 100px;
+}
+
+.content h1, .main-content h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 45px;
+}
+
+.content h3, .main-content h3 {
+    text-align: center;
+    font-size: 17px;
+    padding: 0 20px;    
+}
+
+.hide {
+    display: none;
+}
+
+.active {
+    background-color: rgb(54, 214, 62);
+    border-radius: 30px !important;
+    color: black !important;
+}
+
+.jurusan {
+    display: flex;
+    flex-direction: row;
+}
+
+.jurusan ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid whitesmoke;
+}
+
+.jurusan ul li {
+    margin: 15px;
+    text-align: center;
+}
+
+.jurusan div {
+    border: 1px solid whitesmoke;
+    margin-left: 30px;
+    border: 1 whitesmoke solid;
+    max-width: 500px;
+    max-height: 400px;
+    overflow: auto !important;
+}
+
+.jurusan div p {
+    padding: 15px 30px 40px;
+}
+
+.jurusan h4 {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.jurusan ul li:first-child {
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.line {
+    border: 1px solid wheat;
+    margin: 0 30px;
+}
+
+.list-header {
+    font-weight: bold;
+}
+
+/* Animation */
+@keyframes show{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Tablet or Mobile View */
+@media(max-width: 970px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav h2 {
+        text-align: center;
+        margin: 20px;
+    }
+
+    nav ul {
+        margin: auto;
+    }
+
+    nav ul li:last-child {
+        margin-right: 20px;
+    }
+
+    .main-content {
+        padding: 110px 100px;
+    }
+
+    .main-content h1, .content h1 {
+        font-size: 25px;
+    }
+
+    .main-content h3{
+        font-size: 15px;
+    }
+
+    .jurusan ul li {
+        margin: 10px;
+        font-size: 15px;    
+        text-align: center;
+    }
+
+    .jurusan ul li a {
+        margin: 0;
+        padding: 5px;
+        overflow: auto;
+    }
+}

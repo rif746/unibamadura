@@ -166,6 +166,12 @@ nav ul li a:hover, .jurusan ul li a:hover {
     font-weight: bold;
 }
 
+footer {
+    color: white;
+    text-align: center;
+    font-size: 12px;
+}
+
 /* Animation */
 @keyframes show{
     0% {
